@@ -1,0 +1,28 @@
+site_name: Docker Documentation
+#site_url: http://docs.docker.com/
+site_url: /
+site_description: Documentation for fast and lightweight Docker container based virtualization framework.
+site_favicon: img/favicon.png
+
+dev_addr: '0.0.0.0:8000'
+
+repo_url: https://github.com/docker/docker/
+
+docs_dir: sources
+
+include_search: true
+
+use_absolute_urls: true
+
+# theme: docker
+theme_dir: ./theme/mkdocs/
+theme_center_lead: false
+
+copyright: Copyright &copy; 2014-2015, Docker, Inc.
+google_analytics: ['UA-6096819-11', 'docker.io']
+
+
+pages:
+
+# Introduction:
+- ['index.md', 'About', 'Docker']
