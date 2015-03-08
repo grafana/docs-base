@@ -25,7 +25,9 @@ google_analytics: ['UA-6096819-11', 'docker.io']
 pages:
 
 # Introduction:
-- ['index.md', 'About', 'Docker']
-- ['test.md', 'Tutorials', 'Test']
+- ['index.md', 'About', 'About']
+- ['features/intro/index.md', 'User Guides', 'Introduction']
+- ['features/graphing/index.md', 'Articles', 'Articles']
+- ['troubleshooting/index.md', 'FAQ', 'Troubleshooting']
 
 - ['jsearch.md', '**HIDDEN**']
