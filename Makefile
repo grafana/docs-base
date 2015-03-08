@@ -17,7 +17,7 @@ DOCKER_ENVS := \
 DOCS_MOUNT := $(if $(DOCSDIR),-v $(CURDIR)/$(DOCSDIR):/$(DOCSDIR))
 
 # to allow `make DOCSPORT=9000 docs`
-DOCSPORT := 8000
+DOCSPORT := 8180
 
 GIT_BRANCH := $(shell git rev-parse --abbrev-ref HEAD 2>/dev/null)
 DOCKER_IMAGE := docker$(if $(GIT_BRANCH),:$(GIT_BRANCH))

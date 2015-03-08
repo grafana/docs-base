@@ -5,7 +5,7 @@ set -o pipefail
 
 usage() {
 	cat >&2 <<'EOF'
-To publish the Docker documentation you need to set your access_key and secret_key in the docs/awsconfig file 
+To publish the Docker documentation you need to set your access_key and secret_key in the docs/awsconfig file
 (with the keys in a [profile $AWS_S3_BUCKET] section - so you can have more than one set of keys in your file)
 and set the AWS_S3_BUCKET env var to the name of your bucket.
 
@@ -50,6 +50,8 @@ export BUCKET=$AWS_S3_BUCKET
 export AWS_CONFIG_FILE=$(pwd)/awsconfig
 [ -e "$AWS_CONFIG_FILE" ] || usage
 export AWS_DEFAULT_PROFILE=$BUCKET
+
+cat $AWS_CONFIG_FILE
 
 echo "cfg file: $AWS_CONFIG_FILE ; profile: $AWS_DEFAULT_PROFILE"
 

@@ -1,12 +1,12 @@
-site_name: Docker Documentation
-#site_url: http://docs.docker.com/
+site_name: Grafana Documentation
+#site_url: http://docs.grafana.com/
 site_url: /
-site_description: Documentation for fast and lightweight Docker container based virtualization framework.
-site_favicon: img/favicon.png
+site_description: Documentation for Grafana, The Graphite and Influxdb dashboard and graph composer
+site_favicon: img/fav32.png
 
 dev_addr: '0.0.0.0:8000'
 
-repo_url: https://github.com/docker/docker/
+repo_url: https://github.com/grafana/grafana/
 
 docs_dir: sources
 
@@ -26,3 +26,6 @@ pages:
 
 # Introduction:
 - ['index.md', 'About', 'Docker']
+- ['test.md', 'Tutorials', 'Test']
+
+- ['jsearch.md', '**HIDDEN**']
