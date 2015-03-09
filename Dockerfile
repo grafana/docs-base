@@ -38,5 +38,7 @@ CMD ["mkdocs", "serve"]
 
 COPY . /docs
 
+COPY README.md /docs/sources/index.md
+
 RUN ./build.sh
 
