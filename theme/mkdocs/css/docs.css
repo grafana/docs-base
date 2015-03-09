@@ -1,6 +1,25 @@
 .gf-subnav-section {
-  background-color: #EAEAEA;
+  background-color: #0099cc;
   box-shadow: 0 1px 12px #CACACA;
+}
+
+body.docs .sidebar {
+  padding: 5px 20px;
+  background-color: #F9F9F9;
+  box-shadow: 0 1px 12px #CACACA;
+  margin-top: 32px;
+}
+
+.side-nav li {
+  list-style: none;
+}
+
+.side-nav > li > a {
+  font-size: 16px;
+}
+
+.side-nav .toc-sub-item > a:not(.button) {
+  color: #394d54;
 }
 
 .gf-subnav {
@@ -8,26 +27,191 @@
   margin: 0;
 }
 
-.gf-subnav li {
+.gf-subnav > li {
   float: left;
 }
 
-.gf-subnav li a {
+.gf-subnav > li > a {
   padding: 0px 18px;
   line-height: 60px;
   display: block;
-  color: rgb(52, 52, 52);
+  color: white;
 }
 
-.gf-subnav li a:hover {
-  background-color: rgb(214, 214, 214);
+.gf-subnav > li > a:hover {
+  background: #0887B1;
+}
+
+.gf-subnav > li.active > a {
+  background: #05A4D9;
 }
 
 .gf-subnav input, .gf-subnav button { margin: 0; }
 .gf-subnav input { border-radius: 4px 0 0 5px; }
 .gf-subnav button { border-radius: 0 4px 4px 0; }
 
-
 .gf-subnav .has-form {
   padding: 12px 26.66667px;
 }
+
+.gf-subnav-dropdown > li > a {
+  padding: 10px 0 10px 20px;
+  font-size: 16px;
+  border-bottom: 1px solid #EBEBEB;
+}
+
+.gf-subnav-dropdown > li.active > a {
+  color: rgb(247, 140, 0);
+}
+
+#docs-version-nav > a {
+  padding: 10px 16px 0 0;
+  float: right;
+}
+
+#docs-version-list {
+  margin: 0px;
+  padding: 0px;
+}
+
+#docs-version-nav li {
+  list-style: none;
+  margin: 0;
+  padding: 3px 0 3px 10px;
+}
+
+#docs-version-nav li.divider {
+  background: rgb(231, 230, 230);
+}
+
+.content-body ul {
+  padding: 10px 0px 10px 20px;
+  list-style-position: inherit;
+  list-style: circle;
+}
+
+.content-body ul li {
+  padding-bottom: 5px;
+}
+
+.content-body ul ul {
+  padding: 10px 0px 10px 40px;
+}
+
+.content-body p code {
+  background-color: #FCFCFC;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border: 1px solid #dbdde0;
+  color: #394d54;
+  padding-left: 6px;
+  padding-right: 6px;
+  margin-bottom: 2px;
+}
+
+.content-body blockquote {
+  margin: 0px !important;
+  margin-bottom: 20px !important;
+  margin-top: 20px !important;
+  font-size: 14px;
+  font-weight: 400;
+  color: #394d54;
+  line-height: 1.7;
+  font-style: italic;
+  border: none;
+  border-left: 4px solid #ade5f9;
+  padding: 10px;
+  padding-left: 15px;
+}
+
+.content-body ul {
+  margin-top: 0px !important;
+}
+
+.content-body blockquote a {
+  color: #24b8eb;
+}
+
+.content-body blockquote a:hover {
+  color: #008bb8;
+}
+
+.content-body ul {
+  margin-top: 0px !important;
+}
+
+.content-body pre {
+  font-family: Monaco, Consolas, "Lucida Console", monospace;
+  background-color: #FCFCFC;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  overflow-x: auto;
+}
+.content-body pre code {
+  overflow-wrap: normal;
+  white-space: pre;
+}
+
+.content-body strong {
+  font-weight: bold;
+}
+
+/* Tables */
+.content-body table {
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  width: 100%;
+  word-break: normal;
+}
+
+.content-body thead {
+  background-color: #e8e8e8;
+}
+
+.content-body tr {
+  border-top: 1px solid #ccc;
+  vertical-align: top;
+}
+
+.content-body tr:nth-child(2n) {
+  background-color:#f8f8f8;
+}
+
+.content-body th,
+.content-body td
+{
+  padding: 6px 13px;
+}
+
+.content-body td {
+  border: 1px solid #ddd;
+}
+
+.content-body th {
+  background-color: #c0c0c0;
+  border: 1px solid #c0c0c0;
+  text-align: left;
+}
+
+/*
+ * Table used for showing code and CLI output, not using borders
+ * font-styling and background-color is the same as <pre> blocks.
+ */
+.content-body table.code {
+  font-family: Monaco, Consolas, "Lucida Console", monospace;
+  font-size: 11px;
+}
+
+.content-body table.code,
+.content-body table.code tr,
+.content-body table.code th,
+.content-body table.code td
+{
+  background-color: #FCFCFC;
+  border: none;
+  font-weight: normal;
+}
+

@@ -16,9 +16,10 @@ find . -name "*.md" | xargs sed -i~ -n '/^---*$/!p'
 
 VERSION=$(cat VERSION)
 MAJOR_MINOR="${VERSION%.*}"
-for i in $(seq $MAJOR_MINOR -0.1 1.0); do
-      echo "<li><a class='version' href='/v$i'>Version v$i</a></li>";
-done > sources/versions.html_fragment
+
+# for i in $(seq $MAJOR_MINOR -0.1 1.0); do
+#       echo "<li><a class='version' href='/v$i'>Version v$i</a></li>";
+# done > sources/versions.html_fragment
 
 # TODO: need to run these from the src dir - if its there
 if [[ -e "/src/.git" ]]; then

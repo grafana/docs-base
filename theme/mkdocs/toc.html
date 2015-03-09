@@ -3,7 +3,7 @@
     <li class=""><a href="{{ toc_h2_item.url }}">{{ toc_h2_item.title }}</a>
       <ul>
     {% for toc_h3_item in toc_h2_item.children %}
-      <li><a href="{{ toc_h3_item.url }}">{{ toc_h3_item.title }}</a></li>
+      <li class="toc-sub-item"><a href="{{ toc_h3_item.url }}">{{ toc_h3_item.title }}</a></li>
     {% endfor %}
       </ul>
     </li>

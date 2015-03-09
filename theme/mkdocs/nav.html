@@ -4,10 +4,18 @@
 
 			<ul class="gf-subnav right" role="navigation">
 				{% for menu in nav %}
+				{% set menuLoop = loop %}
 				{% if menu.title != '**HIDDEN**' %}
 				  {% for first_item in menu.children[:1] %}
 					<li class="{% if menu.active %} active{% endif %}">
-						<a href="{{ first_item.url }}">{{ menu.title }}</a>
+						<a href="{{ first_item.url }}" data-dropdown="menu-drop-{{ menuLoop.index }}" data-options="is_hover:true;hover_timeout:0">{{ menu.title }}</a>
+						<ul id="menu-drop-{{ menuLoop.index }}" class="f-dropdown gf-subnav-dropdown" data-dropdown-content aria-hidden="true" tabindex="-1">
+							{% for menu in menu.children %}
+							<li {% if menu.active %}class="active"{% endif %}>
+								<a href="{{ menu.url }}">{{ menu.title }}</a>
+							</li>
+							{% endfor %}
+						</ul>
 					</li>
 					{% endfor %}
 				{% endif %}

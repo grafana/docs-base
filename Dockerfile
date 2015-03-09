@@ -31,9 +31,10 @@ RUN git clone -b docker-markdown-merge https://github.com/SvenDowideit/mkdocs \
 	&& ./setup.py install
 
 WORKDIR /docs
-EXPOSE 8000
-CMD ["mkdocs", "serve"]
 
+EXPOSE 8000
+
+CMD ["mkdocs", "serve"]
 
 COPY . /docs
 
