@@ -111,7 +111,7 @@
 		// if the URL contains a version string, update the version picker to reflect that
 		version = document.location.pathname.match(/^\/(v\d\.\d)\/.*/)
 		if (version && version[1]) {
-			$('#docs-version-number span').textr('Version '+version[1]);
+			$('#docs-version-number span').text('Version '+version[1]);
 		} else {
 			$('#docs-version-number span').text($('#docs-version-number span').text() + " (Latest)");
 		}
