@@ -54,10 +54,15 @@ body.docs .sidebar {
   padding: 12px 26.66667px;
 }
 
+ul.gf-subnav-dropdown {
+  max-width: 400px;
+}
+
 .gf-subnav-dropdown > li > a {
   padding: 10px 0 10px 20px;
   font-size: 16px;
   border-bottom: 1px solid #EBEBEB;
+  white-space: nowrap;
 }
 
 .gf-subnav-dropdown > li.active > a {
