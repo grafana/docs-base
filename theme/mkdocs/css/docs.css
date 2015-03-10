@@ -1,3 +1,85 @@
+/* body.docs */
+/*  */
+/*   .sidebar */
+/*     background: #FAFAFA */
+/*     padding: 10px 20px */
+/*  */
+/*   .sidebar.fixed, [data-magellan-expedition] */
+/*     left: auto !important */
+/*  */
+/*   .side-nav .heading */
+/*     font-weight: 700 */
+/*     text-transform: uppercase */
+/*  */
+/*   .side-nav li */
+/*     margin: 0 */
+/*     padding: 0 */
+/*  */
+/*   .side-nav li a */
+/*     padding: 0.2rem 0 */
+/*  */
+/*   .side-nav li a:hover */
+/*     color: #004054 */
+/*  */
+/*   .side-nav li a:hover */
+/*     background: #F1F1F1 */
+/*     color: black */
+/*  */
+/*   .side-nav .heading, .sidebar form */
+/*     padding: 2px 0px */
+/*  */
+/*   .side-nav li.divider */
+/*     margin: 16px 0px */
+/*  */
+/*   .sidebar h1, .sidebar h2, .sidebar h3, .sidebar h4, .sidebar h5, .sidebar h6 */
+/*     padding: 4px 0px */
+/*     font-size: 0.77778rem */
+/*     font-weight: bold */
+/*  */
+/*   .sidebar .download.button */
+/*     margin: 10px 0px */
+/*     font-size: 1rem */
+/*  */
+/*   // .sidebar .side-nav */
+/*   //   overflow-y: scroll */
+/*   //  height: 600px */
+/*   // */
+/*  */
+/*   .sidebar .label */
+/*     background: #dddddd */
+/*     border-radius: 3px */
+/*     color: #777777 */
+/*     margin-left: 5px */
+/*  */
+/*   .sidebar form */
+/*     margin-bottom: 0 */
+/*  */
+/*   .sidebar .button */
+/*     font-size: 0.66667rem */
+/*  */
+/*   .magellan-fixed.magellan-outer-wrapper */
+/*     overflow-y: scroll */
+/*     width: inherit */
+/*   .magellan-fixed .magellan-inner-wrapper */
+/*     overflow-y: scroll */
+/*  */
+/*   .sidebar input[type="search"]:focus */
+/*     -moz-box-shadow: 0 0 0 !important */
+/*     -webkit-box-shadow: 0 0 0 !important */
+/*     box-shadow: 0 0 0 !important */
+/*  */
+/*   .side-nav li.active > a:first-child */
+/*     color: #008fba */
+/*     background: rgba(0, 64, 84, 0.05) */
+/*     font-weight: bold */
+/*     //font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !important */
+/*   .side-nav li.divider */
+/*     border-top: 1px solid */
+/*     height: 0 */
+/*     padding: 0 */
+/*     list-style: none */
+/*     border-top-color: #e6e6e6 */
+
 .gf-subnav-section {
   background-color: #0099cc;
   box-shadow: 0 1px 12px #CACACA;
