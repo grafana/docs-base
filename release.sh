@@ -31,7 +31,7 @@ if [ "$AWS_S3_BUCKET" == "docs.grafana.org" ]; then
 	fi
 	cat > ./sources/robots.txt <<'EOF'
 User-agent: *
-Disallow: /
+Allow: /
 EOF
 
 else
