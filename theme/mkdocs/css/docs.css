@@ -117,6 +117,7 @@ ul.gf-subnav-dropdown {
 .content-body ul {
   padding: 10px 0px 10px 20px;
   list-style-position: inherit;
+  font-size: 14px;
 }
 
 .content-body ul li {
@@ -145,6 +146,7 @@ blockquote p {
 }
 
 p {
+  font-size: 14px;
   margin: 0 0 1em 0;
 }
 
@@ -167,6 +169,7 @@ p {
   margin-top: 0px !important;
   margin: 0;
   padding-top: 0;
+  font-size: 14px;
 }
 
 .content-body blockquote a {
@@ -238,6 +241,10 @@ p {
   border: 1px solid #c0c0c0;
   text-align: left;
 }
+
+.content-body h2 { font-size: 21px; }
+.content-body h3 { font-size: 18px; }
+.content-body h4 { font-size: 16px; }
 
 /*
  * Table used for showing code and CLI output, not using borders
