@@ -120,7 +120,7 @@ invalidate_cache() {
 	aws configure set preview.cloudfront true
 
 	files=($(cat changed-files | grep 'sources/.*$' | sed -E 's#.*docs/sources##' | sed -E 's#index\.md#index.html#' | sed -E 's#\.md#/index.html#'))
-	files[${#files[@]}]="/index.html"
+	#files[${#files[@]}]="/index.html"
 
 	len=${#files[@]}
 
