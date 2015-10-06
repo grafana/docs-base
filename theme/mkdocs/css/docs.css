@@ -13,7 +13,7 @@
 .side-nav li.side-nav-toc-header {
   font-weight: 600;
   color: #737373;
-  margin-left: 10px;
+  margin-left: -10px;
 }
 
 .side-nav li { margin: 0; padding: 0; list-style: none; }
