@@ -1,3 +1,6 @@
+<li class="side-nav-toc-header">
+	ON THIS PAGE
+</li>
 {% for toc_item in toc %}
   {% for toc_h2_item in toc_item.children %}
     <li class=""><a href="{{ toc_h2_item.url }}">{{ toc_h2_item.title }}</a>

@@ -4,27 +4,27 @@
 }
 
 .sidebar {
-  padding: 5px 20px;
+  padding: 5px 6px 5px 26px;
   background-color: #F9F9F9;
   box-shadow: 0 1px 12px #CACACA;
   margin-top: 32px;
 }
 
+.side-nav-toc-header {
+  font-weight: 600;
+  color: #737373;
+  margin-left: 10px;
+}
+
 .side-nav li { margin: 0; padding: 0; list-style: none; }
-.side-nav li a:not(.button) { padding: 0; padding-top: 12px; color: #087EA5; background-color: transparent;  }
+.side-nav li a:not(.button) { padding: 0; padding-top: 8px; color: #087EA5; background-color: transparent;  }
 .side-nav li a:not(.button):hover, .side-nav li a:not(.button):focus {
   color: #1cc7ff;
   background-color: transparent;
 }
 
-.side-nav > li > a { font-size: 16px; }
+.side-nav > li > a {  }
 .side-nav .toc-sub-item > a:not(.button) { color: #394d54; padding: 0; }
-
-.sidebar h1, .sidebar h2, .sidebar h3, .sidebar h4, .sidebar h5, .sidebar h6 {
-  padding: 4px 0px;
-  font-size: 0.77778rem;
-  font-weight: bold;
-}
 
 .side-nav li.active > a:first-child {
   color: #008fba;
@@ -90,7 +90,6 @@ ul.gf-subnav-dropdown {
 
 .gf-subnav-dropdown > li > a {
   padding: 10px 20px 10px 20px;
-  font-size: 16px;
   white-space: nowrap;
   color: #EEEEEE;
   border-bottom: 1px solid #111111;
@@ -127,7 +126,6 @@ ul.gf-subnav-dropdown {
 .content-body ul {
   padding: 10px 0px 10px 20px;
   list-style-position: inherit;
-  font-size: 14px;
 }
 
 .content-body ul li {
@@ -144,30 +142,13 @@ blockquote p {
 }
 
 p {
-  font-size: 14px;
   margin: 0 0 1em 0;
-}
-
-.content-body blockquote {
-  margin: 0px !important;
-  margin-bottom: 20px !important;
-  margin-top: 20px !important;
-  font-size: 14px;
-  font-weight: 400;
-  color: #394d54;
-  line-height: 1.7;
-  font-style: italic;
-  border: none;
-  border-left: 4px solid #ade5f9;
-  padding: 10px;
-  padding-left: 15px;
 }
 
 .content-body ul {
   margin-top: 0px !important;
   margin: 0;
   padding-top: 0;
-  font-size: 14px;
 }
 
 .content-body blockquote a {
