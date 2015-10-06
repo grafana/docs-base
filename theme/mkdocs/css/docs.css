@@ -10,7 +10,7 @@
   margin-top: 32px;
 }
 
-.side-nav-toc-header {
+.side-nav li.side-nav-toc-header {
   font-weight: 600;
   color: #737373;
   margin-left: 10px;
