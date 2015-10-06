@@ -93,7 +93,7 @@ ul.gf-subnav-dropdown {
   font-size: 16px;
   white-space: nowrap;
   color: #EEEEEE;
-  /* border-bottom: 1px solid #EBEBEB; */
+  border-bottom: 1px solid #111111;
 }
 
 .gf-subnav-dropdown > li > a:hover {
@@ -105,7 +105,7 @@ ul.gf-subnav-dropdown {
 }
 
 #docs-version-nav > a {
-  padding: 10px 16px 0 0;
+  padding: 38px 16px 0 0;
   float: right;
 }
 

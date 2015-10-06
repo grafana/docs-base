@@ -64,21 +64,13 @@
 
 	<div class="container">
 		<div class="row">
-			{% if not meta.no_toc %}
-			<div class="large-3 medium-3 columns">
-				<div class="sidebar">
-					<nav>
-						<ul class="side-nav">
-							{% include "toc.html" %}
-						</ul>
-					</nav>
-				</div>
-			</div>
+
+{% if not meta.no_toc %}
       <div class="medium-9 columns image-shadows content-body">
 {% else %}
       <div class="medium-12 columns image-shadows content-body">
 {% endif %}
-        {% include "beta_warning.html" %}
+
 {% if not meta.no_version_dropdown %}
         <div id="docs-version-nav" class="medium-3 right">
 					<a id="docs-version-number" data-dropdown="docs-version-list" aria-controls="drop1" aria-expanded="false">
@@ -96,9 +88,21 @@
 						{% endif %}
 					</ul>
 				</div>
-				{% endif %}
+{% endif %}
 				{{ content }}
 			</div>
+
+{% if not meta.no_toc %}
+			<div class="large-3 medium-3 columns">
+				<div class="sidebar">
+					<nav>
+						<ul class="side-nav">
+							{% include "toc.html" %}
+						</ul>
+					</nav>
+				</div>
+			</div>
+{% endif %}
 		</div>
 	</div>
 
