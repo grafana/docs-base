@@ -138,18 +138,6 @@ ul.gf-subnav-dropdown {
   padding: 5px 0px 0px 20px;
 }
 
-.content-body p code {
-  background-color: #FCFCFC;
-  border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border: 1px solid #dbdde0;
-  color: #394d54;
-  padding-left: 6px;
-  padding-right: 6px;
-  margin-bottom: 2px;
-}
-
 blockquote p {
   margin-bottom: 0;
   font-size: 14px;
