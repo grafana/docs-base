@@ -1,40 +1,38 @@
 <section class="gf-subnav-section">
-	<div class="row">
-		<nav>
-
-			<ul class="gf-subnav right" role="navigation">
-				{% for menu in nav %}
-				{% set menuLoop = loop %}
-				{% if menu.title != '**HIDDEN**' %}
-				  {% for first_item in menu.children[:1] %}
-					<li class="{% if menu.active %} active{% endif %}">
-						<a href="{{ first_item.url }}" data-dropdown="menu-drop-{{ menuLoop.index }}" data-options="is_hover:true;hover_timeout:0">{{ menu.title }}</a>
-						<ul id="menu-drop-{{ menuLoop.index }}" class="f-dropdown gf-subnav-dropdown" data-dropdown-content aria-hidden="true" tabindex="-1">
-							{% for menu in menu.children %}
-							<li {% if menu.active %}class="active"{% endif %}>
-								<a href="{{ menu.url }}">{{ menu.title }}</a>
-							</li>
-							{% endfor %}
-						</ul>
+	<nav>
+		<ul class="gf-subnav" role="navigation">
+			{% for menu in nav %}
+			{% set menuLoop = loop %}
+			{% if menu.title != '**HIDDEN**' %}
+			{% for first_item in menu.children[:1] %}
+			<li class="{% if menu.active %} active{% endif %}">
+				<a href="{{ first_item.url }}" data-dropdown="menu-drop-{{ menuLoop.index }}" data-options="is_hover:true;hover_timeout:0">{{ menu.title }}</a>
+				<ul id="menu-drop-{{ menuLoop.index }}" class="f-dropdown gf-subnav-dropdown" data-dropdown-content aria-hidden="true" tabindex="-1">
+					{% for menu in menu.children %}
+					<li {% if menu.active %}class="active"{% endif %}>
+						<a href="{{ menu.url }}">{{ menu.title }}</a>
 					</li>
 					{% endfor %}
-				{% endif %}
-				{% endfor %}
+				</ul>
+			</li>
+			{% endfor %}
+			{% endif %}
+			{% endfor %}
 
-				<li class="has-form">
-					<form id="nav_search" class="navbar-index-search pull-right" action="/jsearch/">
-						<div class="row collapse postfix-round" style="width: 280px;">
-							<div class="medium-9 columns">
-								<input name="q" id="tipue_search_input" type="text" class="search-query ui-autocomplete-input" placeholder="Search the Docs" autocomplete="off">
-							</div>
-							<div class="medium-3 columns">
-								<button type="submit" class="button warning postfix">Search</button>
-							</div>
+			<li class="has-form right">
+				<form id="nav_search" class="navbar-index-search pull-right" action="/jsearch/">
+					<div class="row collapse postfix-round" style="width: 280px;">
+						<div class="medium-9 columns">
+							<input name="q" id="tipue_search_input" type="text" class="search-query ui-autocomplete-input" placeholder="Search the Docs" autocomplete="off">
 						</div>
-					</form>
-				</li>
-			</ul>
-		</nav>
-	</div>
+						<div class="medium-3 columns">
+							<button type="submit" class="button warning postfix">Search</button>
+						</div>
+					</div>
+				</form>
+			</li>
+		</ul>
+	</nav>
+	<div class="clearfix"></div>
 </section>
 

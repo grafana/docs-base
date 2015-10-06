@@ -1,6 +1,6 @@
 .top-bar-section li.active:not(.has-form) a:not(.button) {
-  background: #0099cc;
-  box-shadow: 0px 7px 0px #0099cc;
+  /* background: #0099cc; */
+  /* box-shadow: 0px 7px 0px #0099cc; */
 }
 
 .sidebar {
@@ -42,8 +42,11 @@
 }
 
 .gf-subnav-section {
-  background-color: #0099cc;
-  box-shadow: 0 1px 12px #CACACA;
+  background-color: rgba(33, 43, 49, 0.93);
+  border-radius: 5px;
+  position: relative;
+  z-index: 100;
+  box-shadow: 4px 4px 7px black;
 }
 
 .gf-subnav {
@@ -59,15 +62,15 @@
   padding: 0px 18px;
   line-height: 60px;
   display: block;
-  color: white;
+  color: #EEEEEE;
 }
 
 .gf-subnav > li > a:hover {
-  background: #0887B1;
+  background: #2E383C;
 }
 
 .gf-subnav > li.active > a {
-  background: #05A4D9;
+  background: #2E383C;
 }
 
 .gf-subnav input, .gf-subnav button { margin: 0; }
@@ -79,6 +82,8 @@
 }
 
 ul.gf-subnav-dropdown {
+  background-color: rgb(33, 43, 49);
+  border: none;
   width: auto;
   max-width: 400px;
 }
@@ -86,12 +91,17 @@ ul.gf-subnav-dropdown {
 .gf-subnav-dropdown > li > a {
   padding: 10px 20px 10px 20px;
   font-size: 16px;
-  border-bottom: 1px solid #EBEBEB;
   white-space: nowrap;
+  color: #EEEEEE;
+  /* border-bottom: 1px solid #EBEBEB; */
+}
+
+.gf-subnav-dropdown > li > a:hover {
+  background-color: #2E383C;
 }
 
 .gf-subnav-dropdown > li.active > a {
-  color: rgb(247, 140, 0);
+  color: #f08a24
 }
 
 #docs-version-nav > a {

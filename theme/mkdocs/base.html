@@ -48,11 +48,24 @@
 {% include "header.html" %}
 
 <section class="main">
-  {% include "nav.html" %}
-  <div class="container">
-    <div class="row">
-{% if not meta.no_toc %}
-      <div class="large-3 medium-3 columns">
+	<section>
+		<div class="page-header">
+			<div class="page-header-bg">
+			</div>
+			<div class="row">
+				<div class="large-12 columns">
+					<h1>Documentation</h1>
+					{% include "nav.html" %}
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<div class="container">
+		<div class="row">
+			{% if not meta.no_toc %}
+			<div class="large-3 medium-3 columns">
 				<div class="sidebar">
 					<nav>
 						<ul class="side-nav">
