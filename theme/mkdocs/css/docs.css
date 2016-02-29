@@ -52,6 +52,7 @@
 .gf-subnav {
   list-style: none;
   margin: 0;
+  padding-left: 6px;
 }
 
 .gf-subnav > li {
@@ -59,7 +60,7 @@
 }
 
 .gf-subnav > li > a {
-  padding: 0px 15px;
+  padding: 0px 12px;
   line-height: 60px;
   display: block;
   color: #EEEEEE;
