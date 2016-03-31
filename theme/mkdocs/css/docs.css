@@ -239,8 +239,8 @@ p {
   min-height: 20px;
   padding: 8px;
   margin-bottom: 20px;
-  background-color: #f5f5f5;
-  border: 1px solid #e3e3e3;
+  background-color: #FCFCFC;
+  border: 1px solid rgba(255, 113, 0, 0.5)
 }
 
 .content-body table.code,
