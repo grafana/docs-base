@@ -55,24 +55,20 @@
   padding-left: 6px;
 }
 
-.gf-subnav > li {
-  float: left;
-}
-
-.gf-subnav > li > a {
-  padding: 0px 18px;
-  line-height: 60px;
-  display: block;
-  color: #EEEEEE;
-}
-
-.gf-subnav > li > a:hover {
-  background: #2E383C;
-}
-
-.gf-subnav > li.active > a {
-  background: #2E383C;
-}
+/* .gf-subnav > li > a { */
+/*   padding: 0px 18px; */
+/*   line-height: 60px; */
+/*   display: block; */
+/*   color: #EEEEEE; */
+/* } */
+/*  */
+/* .gf-subnav > li > a:hover { */
+/*   background: #2E383C; */
+/* } */
+/*  */
+/* .gf-subnav > li.active > a { */
+/*   background: #2E383C; */
+/* } */
 
 .gf-subnav input, .gf-subnav button { margin: 0; }
 .gf-subnav input { border-radius: 4px 0 0 5px; }
@@ -272,4 +268,67 @@ p {
 .page-footer .newsletter {
   position: relative;
   z-index: 50;
+}
+
+.docs-search-input-wrapper {
+  z-index: 10000;
+  position: relative;
+  margin-top: 7rem;
+}
+
+.full-width {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: initial;
+}
+
+.docs-search-input-wrapper input.search-query {
+  border-radius: 4px;
+  font-size: 17px;
+  padding: 1.5rem;
+  margin-bottom: 0;
+}
+
+/* Bottom border of each suggestion */
+.algolia-docsearch-suggestion {
+  border-bottom-color: #3A3DD1;
+}
+/* Main category headers */
+.algolia-docsearch-suggestion--category-header {
+  background-color: #4B54DE;
+}
+/* Highlighted search terms */
+.algolia-docsearch-suggestion--highlight {
+  color: #3A33D1;
+}
+/* Highligted search terms in the main category headers */
+.algolia-docsearch-suggestion--category-header .algolia-docsearch-suggestion--highlight  {
+  background-color: #4D47D5;
+}
+/* Currently selected suggestion */
+.aa-cursor .algolia-docsearch-suggestion--content {
+  color: #272296;
+}
+
+.aa-cursor .algolia-docsearch-suggestion {
+  background: #EBEBFB;
+}
+
+.algolia-autocomplete {
+  width: 100%;
+}
+
+/* For bigger screens, when displaying results in two columns */
+@media (min-width: 768px) {
+  /* Bottom border of each suggestion */
+  .algolia-docsearch-suggestion {
+    border-bottom-color: #7671df;
+  }
+  /* Left column, with secondary category header */
+  .algolia-docsearch-suggestion--subcategory-column {
+    border-right-color: #7671df;
+    background-color: #F2F2FF;
+    color: #4E4726;
+  }
 }

@@ -1,6 +1,6 @@
-<section class="gf-subnav-section">
+<div class="sidebar">
 	<nav>
-		<ul class="gf-subnav" role="navigation">
+		<ul class="side-nav" role="navigation">
 			{% for menu in nav %}
 			{% set menuLoop = loop %}
 			{% if menu.title != '**HIDDEN**' %}
@@ -18,21 +18,7 @@
 			{% endfor %}
 			{% endif %}
 			{% endfor %}
-
-			<li class="has-form right">
-				<form id="nav_search" class="navbar-index-search pull-right" action="/jsearch/">
-					<div class="row collapse postfix-round" style="width: 215px;">
-						<div class="medium-9 columns">
-							<input name="q" id="tipue_search_input" type="text" class="search-query ui-autocomplete-input" placeholder="Search the Docs" autocomplete="off">
-						</div>
-						<div class="medium-3 columns">
-							<button type="submit" class="button warning postfix">Search</button>
-						</div>
-					</div>
-				</form>
-			</li>
 		</ul>
 	</nav>
-	<div class="clearfix"></div>
-</section>
+</div>
 

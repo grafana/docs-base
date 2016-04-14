@@ -42,6 +42,7 @@
   });
   </script>
   {% endif %}
+
 </head>
 <body class="docs">
 
@@ -52,10 +53,11 @@
 		<div class="page-header">
 			<div class="page-header-bg">
 			</div>
-			<div class="row">
+			<div class="row full-width">
 				<div class="large-12 columns">
-					<h1>Documentation</h1>
-					{% include "nav.html" %}
+					<div class="docs-search-input-wrapper">
+						<input name="q" type="text" class="search-query ui-autocomplete-input" placeholder="Search the Docs" autocomplete="off">
+					</div>
 				</div>
 			</div>
 		</div>
@@ -63,50 +65,53 @@
 
 
 	<div class="container">
-		<div class="row">
-
-{% if not meta.no_toc %}
-      <div class="medium-9 columns image-shadows content-body">
-{% else %}
-      <div class="medium-12 columns image-shadows content-body">
-{% endif %}
-
-{% if not meta.no_version_dropdown %}
-        <div id="docs-version-nav" class="medium-3 right">
-					<a id="docs-version-number" data-dropdown="docs-version-list" aria-controls="drop1" aria-expanded="false">
-						<span>Version {{ major_minor }}</span>
-						<i class="fa fa-caret-down"></i>
-					</a>
-					<ul id="docs-version-list" class="f-dropdown" data-dropdown-content aria-hidden="true" tabindex="-1">
-						{% if not meta.no_edit %}
-						<li role="presentation" class="divider"></li>
-						<li>
-							<a class="" href="https://github.com/grafana/grafana/blob/master/docs/sources/{{ current_page.input_path }}">
-								Edit on GitHub
-							</a>
-					  </li>
-						{% endif %}
-					</ul>
-				</div>
-{% endif %}
-				{{ content }}
+		<div class="row full-width">
+			<div class="medium-3 columns">
+				{% include "nav.html" %}
 			</div>
 
-{% if not meta.no_toc %}
-			<div class="large-3 medium-3 columns">
-				<div class="sidebar">
-					<nav>
-						<ul class="side-nav">
-							{% include "toc.html" %}
+			{% if not meta.no_toc %}
+			<div class="medium-9 columns image-shadows content-body">
+				{% else %}
+				<div class="medium-12 columns image-shadows content-body">
+					{% endif %}
+
+					{% if not meta.no_version_dropdown %}
+					<div id="docs-version-nav" class="medium-3 right">
+						<a id="docs-version-number" data-dropdown="docs-version-list" aria-controls="drop1" aria-expanded="false">
+							<span>Version {{ major_minor }}</span>
+							<i class="fa fa-caret-down"></i>
+						</a>
+						<ul id="docs-version-list" class="f-dropdown" data-dropdown-content aria-hidden="true" tabindex="-1">
+							{% if not meta.no_edit %}
+							<li role="presentation" class="divider"></li>
+							<li>
+								<a class="" href="https://github.com/grafana/grafana/blob/master/docs/sources/{{ current_page.input_path }}">
+									Edit on GitHub
+								</a>
+							</li>
+							{% endif %}
 						</ul>
-					</nav>
+					</div>
+					{% endif %}
+					{{ content }}
 				</div>
-			</div>
-{% endif %}
-		</div>
-	</div>
 
-	<div id="push-footer"></div>
+				{% if not meta.no_toc %}
+				<div class="large-3 medium-3 columns">
+					<div class="sidebar">
+						<nav>
+							<ul class="side-nav">
+								{% include "toc.html" %}
+							</ul>
+						</nav>
+					</div>
+				</div>
+				{% endif %}
+			</div>
+		</div>
+
+		<div id="push-footer"></div>
 
 </section>
 
@@ -123,10 +128,10 @@
 <script src="/tipuesearch/tipuesearch.min.js"></script>
 
 <script type="text/javascript">
-	$(document).ready(function() {
-		$('.main').css("min-height", $(window).height() - 553);
-		// if the URL contains a version string, update the version picker to reflect that
-		version = document.location.pathname.match(/^\/(v\d\.\d)\/.*/)
+$(document).ready(function() {
+	$('.main').css("min-height", $(window).height() - 553);
+	// if the URL contains a version string, update the version picker to reflect that
+	version = document.location.pathname.match(/^\/(v\d\.\d)\/.*/)
 		if (version && version[1]) {
 			$('#docs-version-number span').text('Version '+version[1]);
 		} else {
@@ -158,4 +163,16 @@
 	})
 </script>
 </body>
+
+	<!-- at the end of the HEAD -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" />
+	<!-- at the end of the BODY -->
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+	<script type="text/javascript"> docsearch({
+		apiKey: '2b3541f7b8dfae0eb1e3ef9ed4be8e3a',
+		indexName: 'grafana',
+		inputSelector: '.search-query',
+		algoliaOptions: { 'facetFilters': [ "version:v3.0" ] }
+	});
+	</script>
 </html>
