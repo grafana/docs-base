@@ -108,49 +108,6 @@ upload_current_documentation() {
 	aws s3 cp --profile $BUCKET --cache-control $cache --content-encoding="gzip" --acl public-read "site/search_content.json.gz" "$dst"
 }
 
-invalidate_cache() {
-	if [ "" == "$DISTRIBUTION_ID" ]; then
-		echo "Skipping Cloudfront cache invalidation"
-		return
-	fi
-
-	dst=$1
-
-	#aws cloudfront  create-invalidation --profile docs.docker.com --distribution-id $DISTRIBUTION_ID --invalidation-batch '{"Paths":{"Quantity":1, "Items":["'+$file+'"]},"CallerReference":"19dec2014sventest1"}'
-	aws configure set preview.cloudfront true
-
-	files=($(cat changed-files | grep 'sources/.*$' | sed -E 's#.*docs/sources##' | sed -E 's#index\.md#index.html#' | sed -E 's#\.md#/index.html#'))
-	#files[${#files[@]}]="/index.html"
-
-	len=${#files[@]}
-
-	echo "aws cloudfront  create-invalidation --profile $AWS_S3_BUCKET --distribution-id $DISTRIBUTION_ID --invalidation-batch '" > batchfile
-	echo "{\"Paths\":{\"Quantity\":$len," >> batchfile
-	echo "\"Items\": [" >> batchfile
-
-	#for file in $(cat changed-files | grep 'sources/.*$' | sed -E 's#.*docs/sources##' | sed -E 's#index\.md#index.html#' | sed -E 's#\.md#/index.html#')
-	for file in "${files[@]}"
-	do
-		if [ "$file" == "${files[${#files[@]}-1]}" ]; then
-			comma=""
-		else
-			comma=","
-		fi
-		echo "\"$dst$file\"$comma" >> batchfile
-	done
-
-	echo "]}, \"CallerReference\":" >> batchfile
-	echo "\"$(date)\"}'" >> batchfile
-
-
-	echo "-----"
-	cat batchfile
-	echo "-----"
-	sh batchfile
-	echo "-----"
-}
-
-
 if [ "$OPTIONS" != "--dryrun" ]; then
 	setup_s3
 fi
@@ -160,7 +117,6 @@ if [ "$BUILD_ROOT" == "yes" ]; then
 	echo "Building root documentation"
 	build_current_documentation
 	upload_current_documentation
-	[ "$NOCACHE" ] || invalidate_cache
 fi
 
 #build again with /v1.0/ prefix
