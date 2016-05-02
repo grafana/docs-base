@@ -124,4 +124,3 @@ fi
 echo "Building the /$MAJOR_MINOR/ documentation"
 build_current_documentation
 upload_current_documentation "/$MAJOR_MINOR/"
-[ "$NOCACHE" ] || invalidate_cache "/$MAJOR_MINOR"
