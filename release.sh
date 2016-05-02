@@ -112,8 +112,7 @@ if [ "$OPTIONS" != "--dryrun" ]; then
 	setup_s3
 fi
 
-sed -i "s/^site_url:.*/site_url: http://docs.grafana.org/" mkdocs.yml
-
+sed -i "s/^site_url:.*/site_url: http:\/\/docs.grafana.org\//" mkdocs.yml
 cat mkdocs.yml
 
 # Default to only building the version specific docs so we don't clober the latest by accident with old versions
