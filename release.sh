@@ -164,7 +164,7 @@ if [ "$BUILD_ROOT" == "yes" ]; then
 fi
 
 #build again with /v1.0/ prefix
-sed -i "s/^site_url:.*/site_url: \/$MAJOR_MINOR\//" mkdocs.yml
+#sed -i "s/^site_url:.*/site_url: \/$MAJOR_MINOR\//" mkdocs.yml
 echo "Building the /$MAJOR_MINOR/ documentation"
 build_current_documentation
 upload_current_documentation "/$MAJOR_MINOR/"
