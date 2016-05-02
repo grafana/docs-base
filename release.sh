@@ -112,6 +112,8 @@ if [ "$OPTIONS" != "--dryrun" ]; then
 	setup_s3
 fi
 
+sed -i "s/^site_url:.*/site_url: http://docs.grafana.org/" mkdocs.yml
+
 # Default to only building the version specific docs so we don't clober the latest by accident with old versions
 if [ "$BUILD_ROOT" == "yes" ]; then
 	echo "Building root documentation"
@@ -120,7 +122,6 @@ if [ "$BUILD_ROOT" == "yes" ]; then
 fi
 
 #build again with /v1.0/ prefix
-#sed -i "s/^site_url:.*/site_url: \/$MAJOR_MINOR\//" mkdocs.yml
 echo "Building the /$MAJOR_MINOR/ documentation"
 build_current_documentation
 upload_current_documentation "/$MAJOR_MINOR/"
