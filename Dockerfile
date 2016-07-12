@@ -4,12 +4,17 @@ RUN apt-get update \
 	&& apt-get install -y \
 		gettext \
 		git \
+		curl \
 		libssl-dev \
 		make \
-		python-dev \
-		python-pip \
-		python-setuptools \
-		vim-tiny
+    python2.7 \
+    vim-tiny \
+    python-dev \
+    python-pip \
+    python-setuptools
+
+# RUN curl -O https://bootstrap.pypa.io/get-pip.py
+# RUN python2.7 get-pip.py
 
 RUN pip install mkdocs
 
@@ -19,7 +24,10 @@ RUN pip install mkdocs
 #RUN pip install MarkdownTools2
 
 # this version works, the current versions fail in different ways
-RUN pip install awscli==1.4.4 pyopenssl==0.12
+#
+RUN pip install awscli
+
+#==1.4.4 pyopenssl==0.12
 
 # get my sitemap.xml branch of mkdocs and use that for now
 # commit hash of the newest commit of SvenDowideit/mkdocs on
