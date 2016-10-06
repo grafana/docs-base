@@ -1,3 +1,15 @@
+
+.page-header {
+  padding-bottom: 4rem;
+  h1 {
+    margin-top: 8rem;
+    margin-bottom: 0rem;
+    text-shadow: 3px 3px 5px black;
+    color: $white-text-color;
+    font-style: italic;
+  }
+}
+
 .top-bar-section li.active:not(.has-form) a:not(.button) {
   /* background: #0099cc; */
   /* box-shadow: 0px 7px 0px #0099cc; */
