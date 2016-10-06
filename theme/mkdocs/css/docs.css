@@ -174,7 +174,7 @@ p {
 
 .content-body pre {
   font-family: Monaco, Consolas, "Lucida Console", monospace;
-  background-color: #FCFCFC;
+  background-color: #f4f4f4;
   margin-bottom: 20px;
   border-radius: 4px;
   -webkit-border-radius: 4px;
@@ -251,8 +251,7 @@ p {
   min-height: 20px;
   padding: 8px;
   margin-bottom: 20px;
-  background-color: #FCFCFC;
-  border: 1px solid rgba(255, 113, 0, 0.5)
+  background-color: #f4f4f4;
 }
 
 .content-body table.code,
