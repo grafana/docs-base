@@ -3,8 +3,8 @@
 FILES=`find . -iname *.png`
 for FILE in $FILES; do
   tmpfile=$(mktemp)
-  zopflipng -m -y $FILE $tmpfile
-  mv $tmpfile $1
+  zopflipng -m -y --keepchunks=iCCP --iterations=500 --lossy_transparent $FILE $tmpfile
+  mv $tmpfile $FILE
 done;
 
 
